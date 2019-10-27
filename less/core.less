@@ -1,0 +1,21 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+small {
+	display: block;
+}
+
+hr {
+	background: darken(@color-default, 10%);
+	width: 100%;
+	height: 1px;
+	margin: .5rem 0;
+	border: none;
+}
+
+::selection,
+::-moz-selection {
+	background: lighten(@color-secondary, 5%);
+	color: #FFFFFF;
+}

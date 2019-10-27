@@ -1,0 +1,35 @@
+.progress {
+	width: 100%;
+	height: .85rem;
+	border-radius: 3px;
+	background: darken(@color-default, 5%);
+	overflow: hidden;
+	margin: .5rem 0;
+
+	.progress-bar {
+		background-color: @color-primary;
+		height: 100%;
+		transition: .2s width;
+
+		&.progress-bar-striped {
+			background-image: repeating-linear-gradient(
+				150deg,
+				transparent 0px,
+				transparent 6px,
+				rgba(255,255,255,.15) 6px,
+				rgba(255,255,255,.15) 12px
+			);
+			background-size: 24px 100%;
+		}
+
+		&.progress-bar-animated {
+			animation: animatedProgressBar .5s linear infinite;
+		}
+	}
+}
+
+@keyframes animatedProgressBar {
+	to {
+		background-position: 24px 0;
+	}
+}

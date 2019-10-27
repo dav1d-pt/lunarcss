@@ -1,0 +1,50 @@
+.space-loop (@class, @propertyName, @i) when (@i >= 0) {
+	& when not(@i = 0) {
+		.@{class}-@{i} {
+			@{propertyName}: .25rem * pow(2, @i - 1);
+		}
+	}
+	& when (@i = 0) {
+		.@{class}-@{i} {
+			@{propertyName}: 0;
+		}
+	}
+
+	.space-loop(@class; @propertyName; @i - 1);
+}
+
+.space-loop(m, margin, 4);
+.space-loop(mt, margin-top, 4);
+.space-loop(mb, margin-bottom, 4);
+.space-loop(ml, margin-left, 4);
+.space-loop(mr, margin-right, 4);
+
+.space-loop(p, padding, 4);
+.space-loop(pt, padding-top, 4);
+.space-loop(pb, padding-bottom, 4);
+.space-loop(pl, padding-left, 4);
+.space-loop(pr, padding-right, 4);
+
+.bg-success {
+	background-color: @color-success !important;
+}
+
+.bg-warning {
+	background-color: @color-warning !important;
+}
+
+.bg-danger {
+	background-color: @color-danger !important;
+}
+
+.bg-default {
+	background-color: @color-default !important;
+}
+
+.bg-primary {
+	background-color: @color-primary !important;
+}
+
+.bg-secondary {
+	background-color: @color-secondary !important;
+}

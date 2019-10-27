@@ -1,0 +1,92 @@
+.alert {
+	width: 100%;
+	padding: 1.25rem 3rem 1.25rem 2rem;
+	//border-left: 4px solid;
+	margin: 1rem 0;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 4px;
+		height: 100%;
+		transition: .2s width;
+		z-index: 1;
+	}
+
+	.alert-close {
+		width: 2rem;
+		height: 2rem;
+		position: absolute;
+		right: .5rem;
+		top: .5rem;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		background: transparent;
+		align-items: center;
+		opacity: .5;
+		color: currentColor;
+		transition: .2s background;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	&.alert-default {
+		background: lighten(@color-default, 1%);
+		color: darken(@color-default, 65%);
+
+		&::after {
+			background: darken(@color-default, 15%);
+		}
+
+		.alert-close:hover {
+			background: #FFF;
+		}
+	}
+
+	&.alert-success {
+		background: lighten(@color-success, 32%);
+		color: darken(@color-success, 30%);
+
+		&::after {
+			background: lighten(@color-success, 12%);
+		}
+
+		.alert-close:hover {
+			background: #FFF;
+		}
+	}
+
+	&.alert-warning {
+		background: lighten(@color-warning, 32%);
+		color: darken(@color-warning, 30%);
+
+		&::after {
+			background: lighten(@color-warning, 12%);
+		}
+
+		.alert-close:hover {
+			background: #FFF;
+		}
+	}
+
+	&.alert-danger {
+		background: lighten(@color-danger, 32%);
+		color: darken(@color-danger, 30%);
+
+		&::after {
+			background: lighten(@color-danger, 12%);
+		}
+
+		.alert-close:hover {
+			background: #FFF;
+		}
+	}
+}

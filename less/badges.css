@@ -1,0 +1,11 @@
+.badge {
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  display: inline;
+  margin: 0 0.3em;
+}
+.badge.badge-primary {
+  background: #2CA0DE;
+}
+/*# sourceMappingURL=badges.css.map */

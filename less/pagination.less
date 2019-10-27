@@ -1,0 +1,108 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  font-size: 0;
+  margin: 2rem 0;
+  padding: 0;
+
+  .page-item {
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+
+    .page-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: .5rem;
+      background: #FFFFFF;
+      border: 1px solid darken(@color-default, 8%);
+      border-bottom: 2px solid darken(@color-default, 12%);
+      color: darken(@color-default, 52%);
+      transition: .2s color, .2s border-color;
+      text-decoration: none;
+      float: left;
+
+      i {
+        line-height: 0;
+      }
+    }
+
+    &:not(.active):not(.disabled) .page-link {
+      &:hover {
+        color: @color-primary;
+        border-color: @color-primary;
+        border-bottom-color: darken(@color-primary, 8%);
+      }
+
+      &:focus {
+        outline: 2px solid @color-primary;
+      }
+    }
+
+    &.active .page-link {
+      cursor: default;
+      background: @color-primary;
+      border-color: darken(@color-primary, 8%);
+      border-bottom-color: darken(@color-primary, 14%);
+      color: #FFF;
+    }
+
+    &.disabled .page-link {
+      cursor: default;
+      background: darken(@color-default, 4%);
+      opacity: .6;
+    }
+  }
+
+  &.simple-pagination {
+    display: flex;
+    justify-content: space-between;
+
+    .page-prev,
+    .page-next {
+      font-size: 1rem;
+    }
+
+    .page-prev {
+      text-align: left;
+    }
+
+    .page-next {
+      text-align: right;
+    }
+
+    .page-link {
+      text-decoration: none;
+      display: block;
+
+      .page-item-subtitle {
+        color: lighten(@color-primary, 22%);
+        transition: .1s color;
+      }
+
+      .page-item-title {
+        color: lighten(@color-primary, 7%);
+        transition: .1s color;
+      }
+
+      &:hover {
+        .page-item-subtitle {
+          color: lighten(@color-primary, 18%);
+        }
+
+        .page-item-title {
+          color: @color-primary;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid @color-primary;
+      }
+    }
+  }
+}

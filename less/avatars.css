@@ -1,0 +1,25 @@
+.avatar {
+  border-radius: 50%;
+  background: #2CA0DE;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  position: relative;
+}
+.avatar img {
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  width: 100%;
+  z-index: 1;
+}
+.avatar .avatar-icon {
+  position: absolute;
+  right: 0.25em;
+  bottom: 0.25em;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  background: #2CA0DE;
+}
+/*# sourceMappingURL=avatars.css.map */

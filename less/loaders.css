@@ -1,0 +1,11 @@
+.loader-dots {
+  width: 2.5rem;
+  height: 0.9rem;
+  position: relative;
+}
+.loader-dots .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=loaders.css.map */

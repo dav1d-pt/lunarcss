@@ -1,0 +1,100 @@
+@import "variables";
+
+.avatar {
+	border-radius: 50%;
+	background: @color-primary;
+	display: inline-block;
+	position: relative;
+	margin: 0;
+
+	img {
+		height: 100%;
+		position: relative;
+		border-radius: 50%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&::before {
+		content: attr(data-default);
+		color: rgba(255,255,255,.9);
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 1;
+	}
+
+	.avatar-icon,
+	.avatar-status {
+		position: absolute;
+		box-shadow: 0 0 0 .125rem #FFF;
+		border-radius: 50%;
+		z-index: 3;
+	}
+
+	.avatar-icon {
+		right: -10%;
+		bottom: -10%;
+		width: 50%;
+		height: 50%;
+		background: @color-primary;
+	}
+
+	.avatar-status {
+		right: 0;
+		bottom: 0;
+		width: 25%;
+		height: 25%;
+
+		&.online {background: @color-success}
+		&.away {background: @color-warning}
+		&.busy {background: @color-danger}
+		&.offline {background: @color-default}
+	}
+
+	&.avatar-xl {
+		width: 4rem;
+		height: 4rem;
+
+		&::before {font-size: 2rem}
+	}
+
+	&.avatar-lg {
+		width: 3.25rem;
+		height: 3.25rem;
+
+		&::before {font-size: 1.625rem}
+	}
+
+	&.avatar-md {
+		width: 2.5rem;
+		height: 2.5rem;
+
+		&::before {font-size: 1.25rem}
+	}
+
+	&.avatar-sm {
+		width: 1.75rem;
+		height: 1.75rem;
+
+		&::before {font-size: .875rem}
+	}
+
+	&.avatar-xs {
+		width: 1rem;
+		height: 1rem;
+
+		&::before {font-size: .5rem}
+	}
+
+	&.avatar-action {
+		cursor: pointer;
+		transition: .2s box-shadow;
+		box-shadow: 0 0 0 .2rem fade(@color-primary, 0);
+
+		&:hover {
+			box-shadow: 0 0 0 .2rem fade(@color-primary, 45%);
+		}
+	}
+}

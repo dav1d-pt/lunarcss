@@ -1,0 +1,89 @@
+@import "variables";
+
+.badge {
+	font-weight: bold;
+	border-radius: .2rem;
+	padding: .2em .4em .25em;
+	display: inline-block;
+	margin: 0 .125em;
+	color: #303337;
+	line-height: 1;
+	z-index: 2;
+	font-size: .75em;
+
+	&.badge-round {
+		border-radius: 1em;
+	}
+
+	&.badge-primary {
+		background: @color-primary;
+		color: #FFFFFF;
+	}
+
+	&.badge-dark {
+		background: darken(@color-default, 40%);
+		color: #FFFFFF;
+	}
+
+	&.badge-light {
+		background: @color-default;
+		color: #444;
+	}
+
+	&.badge-success {
+		background: @color-success;
+		color: #FFFFFF;
+	}
+
+	&.badge-warning {
+		background: @color-warning;
+		color: #444;
+	}
+
+	&.badge-danger {
+		background: @color-danger;
+		color: #FFFFFF;
+	}
+
+	&.badge-darker {
+		background: rgba(0,0,0,.15);
+		color: #FFFFFF;
+	}
+
+	&.badge-lighter {
+		background: rgba(255,255,255,.1);
+		color: #444;
+	}
+
+	&[class*="badge-pos-"] {
+		position: absolute;
+	}
+
+	&.badge-pos-tl {
+		top: 0;
+		left: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	&.badge-pos-tr {
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+	}
+
+	&.badge-pos-bl {
+		bottom: 0;
+		left: 0;
+		transform: translate(-50%, 50%);
+	}
+
+	&.badge-pos-br {
+		bottom: 0;
+		right: 0;
+		transform: translate(50%, 50%);
+	}
+
+	&.badge-bordered {
+		border: 2px solid #FFF;
+	}
+}
