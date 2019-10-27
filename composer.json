@@ -1,0 +1,16 @@
+{
+  "name": "dav1d-pt/lunarcss",
+  "type": "library",
+  "description": "Simple, but powerful CSS framework",
+  "keywords": ["css", "framework", "less", "material", "design", "frontend", "less"],
+  "homepage": "https://yourcompany.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dawid Ptak",
+      "email": "dier0@o2.pl",
+      "homepage": "http://yourcompany.com",
+      "role": "Developer"
+    }
+  ]
+}
